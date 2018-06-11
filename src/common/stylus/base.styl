@@ -1,0 +1,42 @@
+@import "variable.styl"
+
+body, html
+  line-height: 1
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback'
+  user-select: none
+  -webkit-tap-highlight-color: transparent
+  background: #fff
+  color: $color-text
+  height: 100%
+  .mu-text-field.disabled
+    .mu-text-field-content
+      color: rgba(255, 255, 255, 0.3)!important
+  .mu-dropDown-menu.disabled
+    svg
+      display: none!important
+    .mu-dropDown-menu-text
+      color: #fff
+  .mu-overlay
+    z-index: 998!important
+  .mu-dialog-wrapper
+    z-index: 998!important
+    .mu-dialog
+      position: relative
+      max-height: 80%!important
+      overflow-y: auto!important
+      max-width: 1250px
+      width: 78%
+      .mu-dialog-body
+        color: #fff
+      .search-item
+        display: flex
+        align-items: center
+        .item
+          margin-left: 5px
+      .mu-timeline-item-icon
+        background: $color-highlight-background
+        div
+          border: 2px solid rgb(232, 232, 232) !important
+  .mu-popover
+    max-height: 80%!important
+    overflow-y: auto!important
