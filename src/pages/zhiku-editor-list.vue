@@ -15,11 +15,15 @@
     </tkm-dialog>
     <tkm-dialog ref="editorDialog" title="警告" cancelLabel="取消" confirmLabel="确定" @alreadyShow="alreadyShow">
       <div class="zhiku-editor-info">
-        <mu-text-field label="信息标题" v-model="infoTitle" labelFloat hintText="请输入标题"></mu-text-field>
-        <tkm-select class="item" :content.sync="infoParent" label="选择所属信息类别" :notEmpty="notRequired">
-          <mu-menu-item v-for="item in parents" :key="item.id + ''" :value="item.id + ''" :title="item.infoTitle"/>
-        </tkm-select>
-        <category-select-dialog v-if="showSelectCategory" :content.sync="selectedCategoryId" ></category-select-dialog>
+        <div class="search-item">
+          <mu-text-field label="信息标题" v-model="infoTitle" labelFloat hintText="请输入标题"></mu-text-field>
+          <tkm-select class="item" :content.sync="infoParent" label="选择所属信息类别" :notEmpty="notRequired">
+            <mu-menu-item v-for="item in parents" :key="item.id + ''" :value="item.id + ''" :title="item.infoTitle"/>
+          </tkm-select>
+        </div>
+        <div class="search-item">
+          <category-select-dialog v-if="showSelectCategory" :content.sync="selectedCategoryId" ></category-select-dialog>
+        </div>
         <div id="editSection"></div>
       </div>
     </tkm-dialog>
